@@ -1,23 +1,28 @@
-# ✨ Welcome to Your Spark Template!
-You've just launched your brand-new Spark Template Codespace — everything’s fired up and ready for you to explore, build, and create with Spark!
+# VineyardTechnologies.com
 
-This template is your blank canvas. It comes with a minimal setup to help you get started quickly with Spark development.
+This repository contains the source code for the official Vineyard Technologies corporate website.
 
-🚀 What's Inside?
-- A clean, minimal Spark environment
-- Pre-configured for local development
-- Ready to scale with your ideas
-  
-🧠 What Can You Do?
+## ✨ About
 
-Right now, this is just a starting point — the perfect place to begin building and testing your Spark applications.
+This project is a sophisticated digital presence that positions Vineyard Technologies as a premium software development and outsourcing partner for enterprise clients. The website is designed to be professional, innovative, and trustworthy, showcasing our services, expertise, and successful projects.
 
-🧹 Just Exploring?
-No problem! If you were just checking things out and don’t need to keep this code:
+## 🚀 Technologies
 
-- Simply delete your Spark.
-- Everything will be cleaned up — no traces left behind.
+The website is built with a modern tech stack, including:
 
-📄 License For Spark Template Resources 
+- **Framework:** React with Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **UI Components:** A combination of Radix UI and custom components.
 
-The Spark Template files and resources from GitHub are licensed under the terms of the MIT license, Copyright GitHub, Inc.
+## Essential Features
+
+- **Hero Section with Value Proposition:** A compelling introduction to our company and services.
+- **Services Overview:** A clear presentation of our core offerings.
+- **About/Expertise Section:** Details about our company, technical capabilities, and team.
+- **Contact/Consultation CTA:** Easy ways for potential clients to get in touch.
+- **Portfolio/Case Studies:** A showcase of our successful projects and client outcomes.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
