@@ -1,22 +1,19 @@
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
-import { defineConfig, PluginOption } from "vite";
-
-import sparkPlugin from "@github/spark/spark-vite-plugin";
-import { resolve } from 'path'
-
-const projectRoot = process.env.PROJECT_ROOT || import.meta.dirname
+import { defineConfig } from "vite";
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    sparkPlugin() as PluginOption,
   ],
+  build: {
+    outDir: 'docs'
+  },
   resolve: {
     alias: {
-      '@': resolve(projectRoot, 'src')
+      '@': new URL('./src', import.meta.url).pathname
     }
   },
 });
