@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Code, Users, Settings, ArrowRight, CheckCircle } from "lucide-react"
+import VineyardTechnologiesLogo from '@/assets/images/logo.webp'
 
 function App() {
   const services = [
@@ -38,7 +39,7 @@ function App() {
       {/* Navigation */}
       <nav className="border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50">
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-          <img src="/src/assets/images/logo.webp" alt="Vineyard Technologies" className="h-8" />
+          <img src={VineyardTechnologiesLogo} alt="Vineyard Technologies" className="h-8" />
           <div className="hidden md:flex items-center space-x-8">
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
@@ -162,7 +163,7 @@ function App() {
       <footer className="border-t border-border bg-secondary/20 py-12 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center">
-            <img src="/src/assets/images/logo.webp" alt="Vineyard Technologies" className="h-8 mx-auto mb-4" />
+            <img src={VineyardTechnologiesLogo} alt="Vineyard Technologies" className="h-8 mx-auto mb-4" />
             <div className="text-sm text-muted-foreground">
               © 2025 Vineyard Technologies. All rights reserved.
             </div>
