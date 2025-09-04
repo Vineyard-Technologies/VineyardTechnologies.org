@@ -93,6 +93,6 @@ Subtle, purposeful motion that reinforces the premium brand without overwhelming
   - Badge components for technology tags
 - **Customizations**: Hero section layout, service grid system, animated statistics counter
 - **States**: Buttons with distinct hover/active states, form inputs with focus indicators and validation feedback
-- **Icon Selection**: Phosphor icons for services (Code, Users, Gear) and contact (Phone, Mail, Calendar)
+- **Icon Selection**: Lucide icons for services (Code, Users, Settings) and contact (Phone, Mail, Calendar)
 - **Spacing**: Consistent 8px base unit with generous white space (24px, 48px, 96px) for premium feel
 - **Mobile**: Stack layouts vertically, larger touch targets (48px minimum), simplified navigation with mobile-first approach
