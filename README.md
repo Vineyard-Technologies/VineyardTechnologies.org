@@ -1,4 +1,4 @@
-# VineyardTechnologies.com
+# VineyardTechnologies.org
 
 This repository contains the source code for the official Vineyard Technologies corporate website.
 

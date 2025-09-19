@@ -44,7 +44,7 @@ function App() {
             <a href="#services" className="text-foreground hover:text-primary transition-colors">Services</a>
             <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
             <Button asChild>
-              <a href="mailto:Contact@VineyardTechnologies.com">Get Started</a>
+              <a href="mailto:Contact@VineyardTechnologies.org">Get Started</a>
             </Button>
           </div>
         </div>
@@ -63,7 +63,7 @@ function App() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="text-lg px-8 py-6" asChild>
-              <a href="mailto:Contact@VineyardTechnologies.com">Start Your Project <ArrowRight className="ml-2" /></a>
+              <a href="mailto:Contact@VineyardTechnologies.org">Start Your Project <ArrowRight className="ml-2" /></a>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
               <a href="#services">Explore Services</a>
