@@ -20,7 +20,7 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0 0);
   
-  --primary: oklch(0.55 0.15 340);
+  --primary: oklch(0.50 0.19 356);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.95 0 0);
   --secondary-foreground: oklch(0.15 0 0);
@@ -34,7 +34,7 @@
   
   --border: oklch(0.9 0 0);
   --input: oklch(0.9 0 0);
-  --ring: oklch(0.55 0.15 340);
+  --ring: oklch(0.50 0.19 356);
   
   --radius: 0.5rem;
 }
@@ -66,4 +66,18 @@
   --radius-xl: calc(var(--radius) * 2);
   --radius-2xl: calc(var(--radius) * 3);
   --radius-full: 9999px;
+}
+
+/* Tech stack scrolling animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 60s linear infinite;
 }
