@@ -8,7 +8,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu"
 import { Link } from "react-router-dom"
-import VineyardTechnologiesLogo from '@/assets/images/logo.webp'
+// Logo is now served from public/images as a static asset
 import { cn } from "@/lib/utils"
 
 const services = [
@@ -34,7 +34,7 @@ export default function Navigation() {
     <nav className="bg-primary text-white sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="bg-white p-2 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-200">
-          <img src={VineyardTechnologiesLogo} alt="Vineyard Technologies" className="h-8" />
+          <img src="/images/logo.webp" alt="Vineyard Technologies" className="h-8" />
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">

@@ -14,12 +14,7 @@ import {
   SiRabbitmq, SiDotnet, SiJavascript, SiSharp
 } from "react-icons/si"
 import { Cloud, Database, Server } from "lucide-react"
-import HeroImage from '@/images/heroImage.webp'
-import CustomSoftwareDevelopmentImage from '@/images/customSoftwareDevelopment.webp'
-import DeveloperOutsourcingImage from '@/images/developerOutsourcing.webp'
-import TechnicalConsultingImage from '@/images/technicalConsulting.webp'
-import TechnicalExcellenceImage from '@/images/technicalExcellence.webp'
-import VineyardTechnologiesIcon from '@/images/vineyardtechnologiesicon.webp'
+// Images are now served from public/images as static assets
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("xrbyzaab");
@@ -35,7 +30,7 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="max-w-6xl mx-auto mt-12">
-      <h3 className="text-2xl font-semibold text-foreground text-center mb-8">Get Started Today</h3>
+      <h3 className="text-2xl font-semibold text-foreground text-center mb-8">Get Started Today <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-6 h-6 ml-2" /></h3>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <div className="space-y-2">
           <label htmlFor="name" className="text-sm font-medium">
@@ -129,7 +124,7 @@ export default function HomePage() {
       title: "Software Development",
       description: "End-to-end development of web applications, mobile apps, and enterprise software solutions tailored to your business needs.",
       features: ["Full-stack development", "Cloud-native architecture", "API design & integration", "Legacy system modernization"],
-      image: CustomSoftwareDevelopmentImage,
+      image: "/images/customSoftwareDevelopment.webp",
       link: "/software-development"
     },
     {
@@ -137,7 +132,7 @@ export default function HomePage() {
       title: "Developer Outsourcing",
       description: "Skilled development teams that integrate seamlessly with your existing processes and deliver exceptional results.",
       features: ["Dedicated development teams", "Staff augmentation", "Technical leadership", "Agile methodology expertise"],
-      image: DeveloperOutsourcingImage,
+      image: "/images/developerOutsourcing.webp",
       link: "/development-outsourcing"
     },
     {
@@ -145,7 +140,7 @@ export default function HomePage() {
       title: "Technical Consulting",
       description: "Strategic guidance on technology decisions, architecture design, and digital transformation initiatives.",
       features: ["Technology strategy", "Architecture reviews", "Performance optimization", "Security assessments"],
-      image: TechnicalConsultingImage,
+      image: "/images/technicalConsulting.webp",
       link: "/technical-consulting"
     }
   ]
@@ -189,14 +184,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section 
         className="py-24 px-6 relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${HeroImage})` }}
+        style={{ backgroundImage: `url(/images/heroImage.webp)` }}
       >
         <div className="absolute inset-0 bg-background/80"></div>
         <div className="container mx-auto text-center max-w-4xl relative z-10">
           <ScrollFadeIn direction="up" delay={200}>
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
               Software Development Services in
-              <span className="text-primary block">Seattle, WA</span>
+              <span className="text-primary block">Seattle, WA <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-12 h-12 ml-2" /></span>
             </h1>
           </ScrollFadeIn>
           <ScrollFadeIn direction="up" delay={400}>
@@ -219,7 +214,7 @@ export default function HomePage() {
               <ScrollFadeIn direction="left">
                 <div>
                   <h2 className="text-4xl font-bold text-foreground mb-6">
-                    Technical Excellence, Delivered
+                    Technical Excellence, Delivered <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-8 h-8 ml-2" />
                   </h2>
                   <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
                     With over a decade of experience in enterprise software development, 
@@ -245,7 +240,7 @@ export default function HomePage() {
               <ScrollFadeIn direction="right" delay={200}>
                 <div className="flex justify-center">
                   <img 
-                    src={TechnicalExcellenceImage} 
+                    src="/images/technicalExcellence.webp" 
                     alt="Technical Excellence" 
                     className="w-full max-w-lg rounded-xl shadow-lg"
                   />
@@ -287,7 +282,9 @@ export default function HomePage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Our Services</h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">
+                  Our Services <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-8 h-8 ml-2" />
+                </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   Comprehensive software development solutions designed to accelerate your business growth
                 </p>
@@ -311,7 +308,7 @@ export default function HomePage() {
                         <service.icon className="w-6 h-6 text-primary" />
                       </div>
                       <img 
-                        src={VineyardTechnologiesIcon} 
+                        src="/images/vineyardtechnologiesicon.webp" 
                         alt="Vineyard Technologies" 
                         className="w-8 h-8"
                       />
@@ -352,7 +349,9 @@ export default function HomePage() {
         <section className="py-16 bg-secondary/30">
           <ScrollFadeIn direction="up">
             <div className="container mx-auto max-w-6xl px-6 mb-12">
-              <h3 className="text-3xl font-bold text-foreground text-center">Expertise, Across the Board</h3>
+              <h3 className="text-3xl font-bold text-foreground text-center">
+                Expertise, Across the Board <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-7 h-7 ml-2" />
+              </h3>
             </div>
           </ScrollFadeIn>
           <ScrollFadeIn direction="up" delay={200}>
@@ -381,7 +380,7 @@ export default function HomePage() {
               <ScrollFadeIn direction="left">
                 <div className="text-center">
                   <h2 className="text-4xl font-bold text-foreground mb-6">
-                    Software Development Services in <span className="text-primary">Seattle, WA</span>
+                    Software Development Services in <span className="text-primary">Seattle, WA <img src="/images/vineyardtechnologiesicon.webp" alt="" className="inline w-8 h-8 ml-2" /></span>
                   </h2>
                   
                   {/* Action Buttons */}

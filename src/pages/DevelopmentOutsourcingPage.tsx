@@ -3,7 +3,7 @@ import CTAButtons from "@/components/CTAButtons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Users, Clock, Globe, Award, Zap, Shield } from "lucide-react"
-import DeveloperOutsourcingImage from '@/images/developerOutsourcing.webp'
+// Image is now served from public/images as a static asset
 import LazyLoadSection from "@/components/LazyLoadSection"
 import ScrollFadeIn from "@/components/ScrollFadeIn"
 
@@ -112,7 +112,7 @@ export default function DevelopmentOutsourcingPage() {
               <ScrollFadeIn direction="right" delay={200}>
                 <div className="flex justify-center">
                   <img 
-                    src={DeveloperOutsourcingImage} 
+                    src="/images/developerOutsourcing.webp" 
                     alt="Developer Outsourcing" 
                     className="w-full max-w-lg rounded-xl shadow-lg"
                   />

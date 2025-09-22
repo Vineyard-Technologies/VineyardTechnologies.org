@@ -1,4 +1,4 @@
-import VineyardTechnologiesLogo from '@/assets/images/logo.webp'
+// Logo is now served from public/images as a static asset
 import { Link } from 'react-router-dom'
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="flex flex-col items-start">
             <Link to="/">
               <div className="bg-white p-3 rounded-xl shadow-lg mb-3 hover:shadow-xl hover:scale-105 transition-all duration-200 cursor-pointer">
-                <img src={VineyardTechnologiesLogo} alt="Vineyard Technologies" className="h-8" />
+                <img src="/images/logo.webp" alt="Vineyard Technologies" className="h-8" />
               </div>
             </Link>
             <div className="text-sm text-white/90">

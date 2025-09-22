@@ -3,7 +3,7 @@ import CTAButtons from "@/components/CTAButtons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Code, Smartphone, Globe, Database, Shield, Zap } from "lucide-react"
-import CustomSoftwareDevelopmentImage from '@/images/customSoftwareDevelopment.webp'
+// Image is now served from public/images as a static asset
 import LazyLoadSection from "@/components/LazyLoadSection"
 import ScrollFadeIn from "@/components/ScrollFadeIn"
 
@@ -88,7 +88,7 @@ export default function SoftwareDevelopmentPage() {
               <ScrollFadeIn direction="right" delay={200}>
                 <div className="flex justify-center">
                   <img 
-                    src={CustomSoftwareDevelopmentImage} 
+                    src="/images/customSoftwareDevelopment.webp" 
                     alt="Custom Software Development" 
                     className="w-full max-w-lg rounded-xl shadow-lg"
                   />
