@@ -129,45 +129,20 @@ function ContactForm() {
 }
 
 export default function ContactPage() {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      content: "Contact@VineyardTechnologies.org",
-      link: "mailto:Contact@VineyardTechnologies.org"
-    },
-    {
-      icon: Phone,
-      title: "Phone",
-      content: "+1 (206) 555-0123",
-      link: "tel:+12065550123"
-    },
-    {
-      icon: MapPin,
-      title: "Address",
-      content: "Seattle, WA, USA",
-      link: "https://maps.google.com/?q=Seattle,WA"
-    },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      content: "Mon-Fri: 9:00 AM - 6:00 PM PST",
-      link: null
-    }
-  ]
 
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="py-24 px-6 bg-secondary/30">
-        <div className="container mx-auto max-w-6xl text-center">
+      <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle2.webp)'}}>
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="container mx-auto max-w-6xl text-center relative z-10">
           <ScrollFadeIn direction="up" delay={200}>
-            <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Get In Touch
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+              Get In Touch <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-12 h-12 md:w-16 md:h-16" />
             </h1>
           </ScrollFadeIn>
           <ScrollFadeIn direction="up" delay={400}>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
               Ready to start your next project? We'd love to hear from you. 
               Let's discuss how we can help bring your ideas to life.
             </p>
@@ -180,9 +155,9 @@ export default function ContactPage() {
         <div className="container mx-auto max-w-4xl">
           <ScrollFadeIn direction="up" delay={100}>
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-foreground mb-6">Send Us a Message <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-6 h-6 md:w-8 md:h-8" /></h2>
               <p className="text-lg text-muted-foreground">
-                Fill out the form below and we'll get back to you within 24 hours, or send us a email at <a href="mailto:Contact@VineyardTechnologies.org" className="text-primary">Contact@VineyardTechnologies.org</a>
+                Fill out the form below and we'll get back to you soon, or send us a email at <a href="mailto:Contact@VineyardTechnologies.org" className="text-primary">Contact@VineyardTechnologies.org</a>
               </p>
             </div>
           </ScrollFadeIn>
@@ -200,7 +175,7 @@ export default function ContactPage() {
           <ScrollFadeIn direction="up" delay={100}>
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">
-                Software Development Services <span className="text-primary">in Seattle, WA</span>
+                Software Development Services in <span className="text-primary">Seattle, WA</span> <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" />
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Located in the heart of the Pacific Northwest, we serve clients locally and globally.

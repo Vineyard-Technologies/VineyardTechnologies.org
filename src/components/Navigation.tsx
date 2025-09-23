@@ -86,7 +86,7 @@ export default function Navigation() {
           </NavigationMenu>
           
           <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary ml-4" asChild>
-            <a href="mailto:Contact@VineyardTechnologies.org">Get Started</a>
+            <Link to="/contact">Get Started <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-6 h-6 ml-1" /></Link>
           </Button>
         </div>
       </div>

@@ -125,7 +125,7 @@ export default function HomePage() {
       description: "End-to-end development of web applications, mobile apps, and enterprise software solutions tailored to your business needs.",
       features: ["Full-stack development", "Cloud-native architecture", "API design & integration", "Legacy system modernization"],
       image: "/images/customSoftwareDevelopment.webp",
-      link: "/software-development"
+      link: "/services/software-development"
     },
     {
       icon: Users,
@@ -133,7 +133,7 @@ export default function HomePage() {
       description: "Skilled development teams that integrate seamlessly with your existing processes and deliver exceptional results.",
       features: ["Dedicated development teams", "Staff augmentation", "Technical leadership", "Agile methodology expertise"],
       image: "/images/developerOutsourcing.webp",
-      link: "/development-outsourcing"
+      link: "/services/development-outsourcing"
     },
     {
       icon: Settings,
@@ -141,7 +141,7 @@ export default function HomePage() {
       description: "Strategic guidance on technology decisions, architecture design, and digital transformation initiatives.",
       features: ["Technology strategy", "Architecture reviews", "Performance optimization", "Security assessments"],
       image: "/images/technicalConsulting.webp",
-      link: "/technical-consulting"
+      link: "/services/technical-consulting"
     }
   ]
 

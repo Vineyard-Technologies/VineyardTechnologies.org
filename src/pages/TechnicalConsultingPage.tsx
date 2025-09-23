@@ -105,7 +105,7 @@ export default function TechnicalConsultingPage() {
             <ScrollFadeIn direction="left">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                  Technical Consulting
+                  Technical Consulting <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-12 h-12 md:w-16 md:h-16" />
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                   Strategic technology guidance from seasoned experts. Whether you're planning a digital transformation, 
@@ -134,7 +134,7 @@ export default function TechnicalConsultingPage() {
         <div className="container mx-auto max-w-6xl">
           <ScrollFadeIn direction="up">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Our Consulting Services</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-4">Our Consulting Services <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Strategic guidance across all aspects of technology planning, implementation, and optimization.
               </p>
@@ -176,7 +176,7 @@ export default function TechnicalConsultingPage() {
         <div className="container mx-auto max-w-6xl">
           <ScrollFadeIn direction="up">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Our Areas of Expertise</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-4">Our Areas of Expertise <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Deep knowledge across modern technology stacks, platforms, and industry best practices.
               </p>
@@ -208,7 +208,7 @@ export default function TechnicalConsultingPage() {
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Our Consulting Process</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Our Consulting Process <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               A systematic approach to understanding your needs and delivering actionable recommendations.
             </p>
@@ -236,7 +236,7 @@ export default function TechnicalConsultingPage() {
       <section className="py-24 px-6 bg-secondary/30">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Why Technical Consulting?</h2>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Why Technical Consulting? <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Strategic technology decisions that drive business value and competitive advantage.
             </p>
@@ -278,11 +278,12 @@ export default function TechnicalConsultingPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 px-6 bg-secondary/30">
+      <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle6.webp)'}}>
+        <div className="absolute inset-0 bg-black/60"></div>
         <ScrollFadeIn direction="up">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold text-foreground mb-6">Ready to Optimize Your Technology?</h2>
-            <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
+            <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Ready to Optimize Your Technology? <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
+            <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-lg">
               Let's discuss your technology challenges and create a strategic plan to achieve your goals 
               with the right architecture, processes, and technologies.
             </p>

@@ -12,7 +12,7 @@ interface CTAButtonsProps {
 
 export default function CTAButtons({
   primaryText = "Send us a Message",
-  primaryHref = "#contact",
+  primaryHref = "/contact",
   primaryAction,
   secondaryText = "Send us an Email",
   secondaryHref = "mailto:Contact@VineyardTechnologies.org",

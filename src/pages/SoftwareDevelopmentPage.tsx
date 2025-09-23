@@ -74,7 +74,7 @@ export default function SoftwareDevelopmentPage() {
               <ScrollFadeIn direction="left">
                 <div>
                   <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                    Custom Software Development
+                    Custom Software Development <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-12 h-12 md:w-16 md:h-16" />
                   </h1>
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                     Transform your business with custom software solutions built to your exact specifications. 
@@ -105,7 +105,7 @@ export default function SoftwareDevelopmentPage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Our Development Services</h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Our Development Services <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   Comprehensive software development solutions tailored to your business needs.
                 </p>
@@ -149,7 +149,7 @@ export default function SoftwareDevelopmentPage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Technologies We Use</h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Technologies We Use <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   We stay current with the latest technologies and frameworks to deliver cutting-edge solutions.
                 </p>
@@ -175,7 +175,7 @@ export default function SoftwareDevelopmentPage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Our Development Process</h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Our Development Process <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   A proven methodology that ensures quality, transparency, and successful project delivery.
                 </p>
@@ -229,11 +229,12 @@ export default function SoftwareDevelopmentPage() {
 
       {/* CTA Section */}
       <LazyLoadSection>
-        <section className="py-24 px-6">
+        <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle5.webp)'}}>
+          <div className="absolute inset-0 bg-black/60"></div>
           <ScrollFadeIn direction="up">
-            <div className="container mx-auto max-w-4xl text-center">
-              <h2 className="text-4xl font-bold text-foreground mb-6">Ready to Build Something Amazing?</h2>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
+            <div className="container mx-auto max-w-4xl text-center relative z-10">
+              <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Ready to Build Something Amazing? <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
+              <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-lg">
                 Let's discuss your software development needs and create a solution that drives your business forward.
               </p>
               <CTAButtons />

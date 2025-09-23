@@ -64,15 +64,16 @@ export default function AboutPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <LazyLoadSection>
-        <section className="py-24 px-6">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle3.webp)'}}>
+          <div className="absolute inset-0 bg-black/75"></div>
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
             <ScrollFadeIn direction="up" delay={200}>
-              <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                About <span className="text-primary">Vineyard Technologies</span>
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                About <span className="text-primary">Vineyard Technologies</span> <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-12 h-12 md:w-16 md:h-16" />
               </h1>
             </ScrollFadeIn>
             <ScrollFadeIn direction="up" delay={400}>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-xl text-white mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 We're a passionate team of software developers and technology consultants based in Seattle, 
                 dedicated to helping businesses transform their ideas into powerful digital solutions.
               </p>
@@ -91,7 +92,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <ScrollFadeIn direction="left">
                 <div>
-                  <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission</h2>
+                  <h2 className="text-4xl font-bold text-foreground mb-6">Our Mission <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                   <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
                     At Vineyard Technologies, we believe that great software should empower businesses 
                     to reach their full potential. Our mission is to bridge the gap between innovative 
@@ -142,7 +143,7 @@ export default function AboutPage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up" delay={100}>
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Our Values</h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Our Values <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   The principles that guide everything we do and shape how we work with our clients
                 </p>
@@ -177,7 +178,7 @@ export default function AboutPage() {
         <section className="py-24 px-6 bg-secondary/30">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-foreground mb-4">Our Expertise</h2>
+              <h2 className="text-4xl font-bold text-foreground mb-4">Our Expertise <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 We specialize in modern technologies and proven methodologies to deliver exceptional results
               </p>
@@ -197,21 +198,22 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <LazyLoadSection>
-        <section className="py-24 px-6">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle4.webp)'}}>
+          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
             <ScrollFadeIn direction="up" delay={100}>
-              <h2 className="text-4xl font-bold text-foreground mb-6">Why Choose Us?</h2>
+              <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Why Choose Us? <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
             </ScrollFadeIn>
             <ScrollFadeIn direction="up" delay={300}>
-              <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-white mb-8 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 Located in Seattle's thriving tech ecosystem, we combine Pacific Northwest innovation 
                 with world-class technical expertise. Our team brings years of experience from startups 
-                to Fortune 500 companies, ensuring we understand both the technical and business sides 
+                to global enterprises, ensuring we understand both the technical and business sides 
                 of software development.
               </p>
             </ScrollFadeIn>
             <ScrollFadeIn direction="up" delay={500}>
-              <p className="text-lg text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto">
+              <p className="text-lg text-white mb-12 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
                 We don't just write code – we build partnerships. When you work with Vineyard Technologies, 
                 you're getting a team that's invested in your success and committed to delivering solutions 
                 that make a real impact on your business.
