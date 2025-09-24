@@ -36,7 +36,25 @@ function RedirectHandler() {
     const redirectPath = sessionStorage.getItem('redirectPath')
     if (redirectPath) {
       sessionStorage.removeItem('redirectPath')
-      navigate(redirectPath, { replace: true })
+      
+      // List of valid routes
+      const validRoutes = [
+        '/',
+        '/about',
+        '/careers', 
+        '/contact',
+        '/services/software-development',
+        '/services/development-outsourcing',
+        '/services/technical-consulting',
+        '/terms',
+        '/privacy',
+        '/sitemap'
+      ]
+      
+      // Only navigate if it's a valid route, otherwise stay on homepage
+      if (validRoutes.includes(redirectPath)) {
+        navigate(redirectPath, { replace: true })
+      }
     }
   }, [navigate])
 
@@ -62,6 +80,7 @@ function App() {
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/sitemap" element={<SiteMapPage />} />
+            <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>
         <Footer />
