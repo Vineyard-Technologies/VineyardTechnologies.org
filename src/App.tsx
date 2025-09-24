@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { lazy, Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
+import { lazy, Suspense, useEffect } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
@@ -28,9 +28,25 @@ function PageLoader() {
   )
 }
 
+function RedirectHandler() {
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    // Check if we were redirected from a 404
+    const redirectPath = sessionStorage.getItem('redirectPath')
+    if (redirectPath) {
+      sessionStorage.removeItem('redirectPath')
+      navigate(redirectPath, { replace: true })
+    }
+  }, [navigate])
+
+  return null
+}
+
 function App() {
   return (
     <Router>
+      <RedirectHandler />
       <ScrollToTop />
       <div className="min-h-screen bg-background">
         <Navigation />
