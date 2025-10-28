@@ -142,7 +142,7 @@ export default function OverlordPage() {
 
       {/* CTA Section */}
       <LazyLoadSection>
-        <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/seattle5.webp)'}}>
+        <section className="py-24 px-6 bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/images/overlordCTAImage.webp)'}}>
           <div className="absolute inset-0 bg-black/60"></div>
           <ScrollFadeIn direction="up">
             <div className="container mx-auto max-w-4xl text-center relative z-10">
