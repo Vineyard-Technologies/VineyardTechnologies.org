@@ -33,17 +33,20 @@ const products = [
   {
     title: "Overlord",
     href: "/products/overlord",
-    description: "An asset rendering pipeline management tool for Daz Studio and NVIDIA Iray."
+    description: "An asset rendering pipeline management tool for NVIDIA Iray.",
+    icon: "/images/overlordIcon.webp"
   },
   {
     title: "DaggerQuest",
     href: "/products/daggerquest",
-    description: "A hack n' slash action role playing game playable directly from a web browser."
+    description: "A action role playing game playable directly from a web browser.",
+    icon: "/images/DaggerQuestIcon.webp"
   },
   {
     title: "Mythic Market Mogul",
     href: "/products/mythic-market-mogul",
-    description: "A multi-platform deep-dive analysis suite for monitoring virtual commodities."
+    description: "A deep-dive analysis suite for monitoring virtual commodities.",
+    icon: "/images/MythicMarketMogulIcon.webp"
   }
 ]
 
@@ -65,7 +68,7 @@ export default function Navigation() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white/90 hover:text-white bg-transparent px-4 py-2 text-base font-normal">
+                <NavigationMenuTrigger className="text-white/90 bg-transparent px-4 py-2 text-base font-normal hover:!bg-transparent hover:!text-white/90 data-[state=open]:bg-transparent data-[state=open]:hover:!bg-transparent focus:!bg-transparent focus:!text-white/90">
                   Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -84,7 +87,7 @@ export default function Navigation() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-white/90 hover:text-white bg-transparent px-4 py-2 text-base font-normal">
+                <NavigationMenuTrigger className="text-white/90 bg-transparent px-4 py-2 text-base font-normal hover:!bg-transparent hover:!text-white/90 data-[state=open]:bg-transparent data-[state=open]:hover:!bg-transparent focus:!bg-transparent focus:!text-white/90">
                   Products
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -94,6 +97,7 @@ export default function Navigation() {
                         key={product.title}
                         title={product.title}
                         href={product.href}
+                        icon={product.icon}
                       >
                         {product.description}
                       </ListItem>
@@ -125,11 +129,12 @@ export default function Navigation() {
   )
 }
 
-const ListItem = ({ className, title, children, href, ...props }: {
+const ListItem = ({ className, title, children, href, icon, ...props }: {
   className?: string
   title: string
   children: React.ReactNode
   href: string
+  icon?: string
   [key: string]: any
 }) => {
   return (
@@ -138,15 +143,20 @@ const ListItem = ({ className, title, children, href, ...props }: {
         <Link
           to={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "group block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary hover:text-primary-foreground focus:bg-primary focus:text-primary-foreground",
             className
           )}
           {...props}
         >
-          <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-            {children}
-          </p>
+          <div className="flex items-center gap-4">
+            {icon && <img src={icon} alt={title} className="w-16 h-16 rounded flex-shrink-0" />}
+            <div className="flex-1">
+              <div className="text-sm font-medium leading-none">{title}</div>
+              <p className="line-clamp-2 text-sm leading-snug text-muted-foreground group-hover:text-primary-foreground mt-1">
+                {children}
+              </p>
+            </div>
+          </div>
         </Link>
       </NavigationMenuLink>
     </li>

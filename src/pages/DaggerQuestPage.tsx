@@ -1,6 +1,7 @@
 import CTAButtons from "@/components/CTAButtons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 import { CheckCircle, Swords, Users, Globe, Gamepad2 } from "lucide-react"
 import LazyLoadSection from "@/components/LazyLoadSection"
 import ScrollFadeIn from "@/components/ScrollFadeIn"
@@ -51,16 +52,36 @@ export default function DaggerQuestPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <ScrollFadeIn direction="left">
                 <div>
-                  <Badge className="mb-4" variant="secondary">Product</Badge>
-                  <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6 leading-tight">
-                    DaggerQuest <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-12 h-12 md:w-16 md:h-16" />
-                  </h1>
+                  <div className="mb-6">
+                    <img 
+                      src="/images/DaggerQuestLogo.webp" 
+                      alt="DaggerQuest" 
+                      className="w-full"
+                    />
+                  </div>
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
                     An action role playing game playable directly from a web browser. 
                     Dive into epic adventures, master combat skills, and explore vast worlds 
                     without ever leaving your browser.
                   </p>
-                  <CTAButtons />
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button 
+                      className="bg-primary text-white hover:bg-primary/90 px-8 py-3 text-lg"
+                      asChild
+                    >
+                      <a href="https://DaggerQuest.com" target="_blank" rel="noopener noreferrer">
+                        Go to DaggerQuest.com
+                      </a>
+                    </Button>
+                    <Button 
+                      className="border-2 border-gray-400 text-gray-700 bg-white hover:bg-white hover:text-primary hover:border-primary px-8 py-3 text-lg transition-colors duration-200"
+                      asChild
+                    >
+                      <a href="https://github.com/Vineyard-Technologies/DaggerQuest" target="_blank" rel="noopener noreferrer">
+                        Browse Code on GitHub <img src="/images/github.webp" alt="GitHub" className="inline w-6 h-6 ml-2" />
+                      </a>
+                    </Button>
+                  </div>
                 </div>
               </ScrollFadeIn>
               
@@ -159,11 +180,19 @@ export default function DaggerQuestPage() {
           <div className="absolute inset-0 bg-black/60"></div>
           <ScrollFadeIn direction="up">
             <div className="container mx-auto max-w-4xl text-center relative z-10">
-              <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Ready to Begin Your Quest? <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
+              <h2 className="text-4xl font-bold text-white mb-6 drop-shadow-lg">Proudly Open Source <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
               <p className="text-xl text-white mb-8 leading-relaxed drop-shadow-lg">
-                Contact us to learn more about DaggerQuest and join the adventure today.
+                See behind-the-scenes updates or contribute to DaggerQuest's development.
               </p>
-              <CTAButtons />
+              <Button 
+                size="lg" 
+                className="bg-white text-black hover:bg-white/90 font-semibold"
+                asChild
+              >
+                <a href="https://github.com/Vineyard-Technologies/DaggerQuest" target="_blank" rel="noopener noreferrer">
+                  See Repository <img src="/images/github.webp" alt="GitHub" className="inline w-6 h-6 ml-2" />
+                </a>
+              </Button>
             </div>
           </ScrollFadeIn>
         </section>
