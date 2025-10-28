@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ExternalLink, FileText, Users, Mail, Settings } from "lucide-react"
+import { ExternalLink, FileText, Users, Mail, Settings, Package } from "lucide-react"
 import ScrollFadeIn from "@/components/ScrollFadeIn"
 
 export default function SiteMapPage() {
@@ -19,11 +19,6 @@ export default function SiteMapPage() {
       title: "Contact",
       path: "/contact", 
       description: "Get in touch with us through our contact form"
-    },
-    {
-      title: "Careers",
-      path: "/careers",
-      description: "Current job opportunities and career information"
     }
   ]
 
@@ -42,6 +37,24 @@ export default function SiteMapPage() {
       title: "Technical Consulting",
       path: "/services/technical-consulting",
       description: "Strategic technology guidance and consulting"
+    }
+  ]
+
+  const productPages = [
+    {
+      title: "Overlord",
+      path: "/products/overlord",
+      description: "An asset rendering pipeline management tool for NVIDIA Iray"
+    },
+    {
+      title: "DaggerQuest",
+      path: "/products/daggerquest",
+      description: "An action role playing game playable directly from a web browser"
+    },
+    {
+      title: "Mythic Market Mogul",
+      path: "/products/mythic-market-mogul",
+      description: "A multi-platform virtual commodities monitoring suite"
     }
   ]
 
@@ -86,7 +99,7 @@ export default function SiteMapPage() {
                 <FileText className="w-6 h-6 text-primary mr-3" />
                 <h2 className="text-3xl font-bold text-foreground">Main Pages</h2>
               </div>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               {mainPages.map((page, index) => (
                 <Card key={index} className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
@@ -121,6 +134,39 @@ export default function SiteMapPage() {
             </div>
             <div className="grid md:grid-cols-3 gap-6">
               {servicePages.map((page, index) => (
+                <Card key={index} className="h-full hover:shadow-lg transition-shadow">
+                  <CardHeader>
+                    <CardTitle className="flex items-center justify-between text-lg">
+                      <Link 
+                        to={page.path} 
+                        className="text-primary hover:text-primary/80 transition-colors"
+                      >
+                        {page.title}
+                      </Link>
+                      <ExternalLink className="w-4 h-4 text-muted-foreground" />
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {page.description}
+                    </CardDescription>
+                    <p className="text-sm text-muted-foreground mt-2 font-mono">
+                      {page.path}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Product Pages */}
+          <section className="mb-12">
+            <div className="flex items-center mb-6">
+              <Package className="w-6 h-6 text-primary mr-3" />
+              <h2 className="text-3xl font-bold text-foreground">Product Pages</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-6">
+              {productPages.map((page, index) => (
                 <Card key={index} className="h-full hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <CardTitle className="flex items-center justify-between text-lg">

@@ -7,11 +7,13 @@ import ScrollToTop from '@/components/ScrollToTop'
 // Lazy load all page components
 const HomePage = lazy(() => import('@/pages/HomePage'))
 const AboutPage = lazy(() => import('@/pages/AboutPage'))
-const CareersPage = lazy(() => import('@/pages/CareersPage'))
 const ContactPage = lazy(() => import('@/pages/ContactPage'))
 const SoftwareDevelopmentPage = lazy(() => import('@/pages/SoftwareDevelopmentPage'))
 const DevelopmentOutsourcingPage = lazy(() => import('@/pages/DevelopmentOutsourcingPage'))
 const TechnicalConsultingPage = lazy(() => import('@/pages/TechnicalConsultingPage'))
+const OverlordPage = lazy(() => import('@/pages/OverlordPage'))
+const DaggerQuestPage = lazy(() => import('@/pages/DaggerQuestPage'))
+const MythicMarketMogulPage = lazy(() => import('@/pages/MythicMarketMogulPage'))
 const TermsOfServicePage = lazy(() => import('@/pages/TermsOfServicePage'))
 const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage'))
 const SiteMapPage = lazy(() => import('@/pages/SiteMapPage'))
@@ -41,11 +43,13 @@ function RedirectHandler() {
       const validRoutes = [
         '/',
         '/about',
-        '/careers', 
         '/contact',
         '/services/software-development',
         '/services/development-outsourcing',
         '/services/technical-consulting',
+        '/products/overlord',
+        '/products/daggerquest',
+        '/products/mythic-market-mogul',
         '/terms',
         '/privacy',
         '/sitemap'
@@ -72,11 +76,13 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
-            <Route path="/careers" element={<CareersPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
             <Route path="/services/development-outsourcing" element={<DevelopmentOutsourcingPage />} />
             <Route path="/services/technical-consulting" element={<TechnicalConsultingPage />} />
+            <Route path="/products/overlord" element={<OverlordPage />} />
+            <Route path="/products/daggerquest" element={<DaggerQuestPage />} />
+            <Route path="/products/mythic-market-mogul" element={<MythicMarketMogulPage />} />
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/sitemap" element={<SiteMapPage />} />

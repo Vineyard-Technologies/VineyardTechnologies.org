@@ -29,6 +29,24 @@ const services = [
   }
 ]
 
+const products = [
+  {
+    title: "Overlord",
+    href: "/products/overlord",
+    description: "An asset rendering pipeline management tool for Daz Studio and NVIDIA Iray."
+  },
+  {
+    title: "DaggerQuest",
+    href: "/products/daggerquest",
+    description: "A hack n' slash action role playing game playable directly from a web browser."
+  },
+  {
+    title: "Mythic Market Mogul",
+    href: "/products/mythic-market-mogul",
+    description: "A multi-platform deep-dive analysis suite for monitoring virtual commodities."
+  }
+]
+
 export default function Navigation() {
   return (
     <nav className="bg-primary text-white sticky top-0 z-50 shadow-lg">
@@ -66,14 +84,27 @@ export default function Navigation() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/about" className="text-white/90 hover:text-white transition-colors px-4 py-2">
-                  About
-                </Link>
+                <NavigationMenuTrigger className="text-white/90 hover:text-white bg-transparent px-4 py-2 text-base font-normal">
+                  Products
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[500px] gap-3 p-4 md:w-[600px] md:grid-cols-1 lg:w-[600px]">
+                    {products.map((product) => (
+                      <ListItem
+                        key={product.title}
+                        title={product.title}
+                        href={product.href}
+                      >
+                        {product.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <Link to="/careers" className="text-white/90 hover:text-white transition-colors px-4 py-2">
-                  Careers
+                <Link to="/about" className="text-white/90 hover:text-white transition-colors px-4 py-2">
+                  About
                 </Link>
               </NavigationMenuItem>
               

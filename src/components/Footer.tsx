@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
   return (
     <footer className="bg-primary py-12 px-6 text-white">
-      <div className="w-full max-w-none px-6">
+      <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between space-y-6 md:space-y-0">
           {/* Logo - Far left corner with white rounded background */}
           <div className="flex flex-col items-start">

@@ -11,6 +11,32 @@
   }
 }
 
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: oklch(0.95 0 0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: oklch(0.50 0.19 356);
+  border-radius: 8px;
+  border: 3px solid oklch(0.95 0 0);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: oklch(0.45 0.19 356);
+}
+
+/* Firefox scrollbar styling */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: oklch(0.50 0.19 356) oklch(0.95 0 0);
+}
+
 :root {
   --background: oklch(1 0 0);
   --foreground: oklch(0.15 0 0);

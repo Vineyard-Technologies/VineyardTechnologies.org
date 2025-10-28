@@ -45,7 +45,7 @@ export default function SoftwareDevelopmentPage() {
     {
       step: "01",
       title: "Discovery & Planning",
-      description: "We analyze your requirements, define project scope, and create a detailed development roadmap."
+      description: "We analyze your requirements, define project scope, and create a detailed dev roadmap."
     },
     {
       step: "02",
