@@ -19,13 +19,15 @@ export default function MythicMarketMogulPage() {
       title: "Old School RuneScape",
       description: "Track Grand Exchange prices, merching opportunities, and item trends.",
       available: true,
-      logo: "/images/osrsLogo.webp"
+      logo: "/images/osrsLogo.webp",
+      reportUrl: "https://reports.vineyardtechnologies.org/osrs/"
     },
     {
       title: "Eve Online",
       description: "Monitor market hubs, regional pricing, and trade route profitability.",
       available: true,
-      logo: "/images/eveLogo.webp"
+      logo: "/images/eveLogo.webp",
+      reportUrl: "https://reports.vineyardtechnologies.org/eve/"
     },
     {
       title: "Albion Online",
@@ -104,9 +106,11 @@ export default function MythicMarketMogulPage() {
               
               <ScrollFadeIn direction="right" delay={200}>
                 <div className="flex justify-center">
-                  <div className="w-full max-w-lg aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-xl shadow-lg flex items-center justify-center">
-                    <TrendingUp className="w-48 h-48 text-primary/40" />
-                  </div>
+                  <img 
+                    src="/images/MMMHeroImage.webp" 
+                    alt="Mythic Market Mogul Dashboard" 
+                    className="w-full max-w-lg rounded-xl shadow-lg"
+                  />
                 </div>
               </ScrollFadeIn>
             </div>
@@ -130,8 +134,8 @@ export default function MythicMarketMogulPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {platforms.map((platform, index) => (
                 <ScrollFadeIn key={index} direction="up" delay={index * 200}>
-                  <Card className={`h-full hover:shadow-lg transition-shadow duration-300 ${!platform.available ? 'opacity-60' : ''}`}>
-                    <CardHeader>
+                  <Card className={`h-full hover:shadow-lg transition-shadow duration-300 flex flex-col ${!platform.available ? 'opacity-60' : ''}`}>
+                    <CardHeader className="flex-1">
                       <div className="flex items-center gap-4 mb-4">
                         <img src={platform.logo} alt={platform.title} className="w-16 h-16 rounded object-contain" />
                         <CardTitle className="text-xl">{platform.title}</CardTitle>
@@ -140,6 +144,18 @@ export default function MythicMarketMogulPage() {
                         {platform.description}
                       </CardDescription>
                     </CardHeader>
+                    {platform.reportUrl && (
+                      <CardContent className="pt-0">
+                        <Button 
+                          className="w-full bg-primary text-white hover:bg-primary/90"
+                          asChild
+                        >
+                          <a href={platform.reportUrl} target="_blank" rel="noopener noreferrer">
+                            Open Report
+                          </a>
+                        </Button>
+                      </CardContent>
+                    )}
                   </Card>
                 </ScrollFadeIn>
               ))}
