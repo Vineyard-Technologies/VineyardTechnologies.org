@@ -1,10 +1,105 @@
+import { useState } from "react"
 import CTAButtons from "@/components/CTAButtons"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { CheckCircle, TrendingUp, Bell, BarChart3, Smartphone } from "lucide-react"
 import LazyLoadSection from "@/components/LazyLoadSection"
 import ScrollFadeIn from "@/components/ScrollFadeIn"
+import { useForm, ValidationError } from '@formspree/react'
+
+function OSRSNewsletterForm() {
+  const [state, handleSubmit] = useForm("xwpwbzzb") // Your OSRS form ID
+  const hasErrors = state.errors && Object.keys(state.errors).length > 0
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <p className={`text-sm font-medium text-center ${
+        state.succeeded ? 'text-green-600' : 
+        hasErrors ? 'text-red-600' : ''
+      }`}>
+        {state.succeeded 
+          ? 'Email sign up successful!'
+          : hasErrors
+          ? 'Please enter a valid email address!'
+          : 'Subscribe to the daily newsletter!'}
+      </p>
+      
+      <Input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="your.email@example.com"
+        className="w-full"
+        disabled={state.submitting || state.succeeded}
+        required
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      
+      <Button 
+        type="submit"
+        variant="outline"
+        className="w-full hover:text-primary"
+        disabled={state.submitting || state.succeeded}
+      >
+        <Bell className="w-4 h-4 mr-2" />
+        {state.submitting ? 'Signing Up...' : 
+         state.succeeded ? 'Subscribed!' : 'Sign Up'}
+      </Button>
+    </form>
+  )
+}
+
+function EVENewsletterForm() {
+  const [state, handleSubmit] = useForm("mblpybba") // EVE Online form ID
+  const hasErrors = state.errors && Object.keys(state.errors).length > 0
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <p className={`text-sm font-medium text-center ${
+        state.succeeded ? 'text-green-600' : 
+        hasErrors ? 'text-red-600' : ''
+      }`}>
+        {state.succeeded 
+          ? 'Success! You have been signed up for the newsletter.'
+          : hasErrors
+          ? 'Please enter a valid email address!'
+          : 'Subscribe to the daily newsletter!'}
+      </p>
+      
+      <Input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="your.email@example.com"
+        className="w-full"
+        disabled={state.submitting || state.succeeded}
+        required
+      />
+      <ValidationError 
+        prefix="Email" 
+        field="email"
+        errors={state.errors}
+      />
+      
+      <Button 
+        type="submit"
+        variant="outline"
+        className="w-full hover:text-primary"
+        disabled={state.submitting || state.succeeded}
+      >
+        <Bell className="w-4 h-4 mr-2" />
+        {state.submitting ? 'Signing Up...' : 
+         state.succeeded ? 'Subscribed!' : 'Sign Up'}
+      </Button>
+    </form>
+  )
+}
 
 export default function MythicMarketMogulPage() {
   const scrollToSection = (id: string) => {
@@ -16,13 +111,15 @@ export default function MythicMarketMogulPage() {
 
   const platforms = [
     {
+      id: 'osrs',
       title: "Old School RuneScape",
-      description: "Track Grand Exchange prices, merching opportunities, and item trends.",
+      description: "Track non-member and member item prices, and Grand Exchange trends.",
       available: true,
       logo: "/images/osrsLogo.webp",
       reportUrl: "https://reports.vineyardtechnologies.org/osrs/"
     },
     {
+      id: 'eve',
       title: "Eve Online",
       description: "Monitor market hubs, regional pricing, and trade route profitability.",
       available: true,
@@ -30,24 +127,28 @@ export default function MythicMarketMogulPage() {
       reportUrl: "https://reports.vineyardtechnologies.org/eve/"
     },
     {
+      id: 'albion',
       title: "Albion Online",
       description: "Coming Soon!",
       available: false,
       logo: "/images/albionLogo.webp"
     },
     {
+      id: 'gw2',
       title: "Guild Wars 2",
       description: "Coming Soon!",
       available: false,
       logo: "/images/gw2Logo.webp"
     },
     {
+      id: 'wow',
       title: "World of Warcraft",
       description: "Coming Soon!",
       available: false,
       logo: "/images/wowLogo.webp"
     },
     {
+      id: 'ffxiv',
       title: "Final Fantasy XIV",
       description: "Coming Soon!",
       available: false,
@@ -124,28 +225,28 @@ export default function MythicMarketMogulPage() {
           <div className="container mx-auto max-w-6xl">
             <ScrollFadeIn direction="up">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Supported Markets <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
+                <h2 className="text-4xl font-bold text-foreground mb-4">Market Analysis Reports <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   See the latest reports for the following games.
                 </p>
               </div>
             </ScrollFadeIn>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8">
               {platforms.map((platform, index) => (
                 <ScrollFadeIn key={index} direction="up" delay={index * 200}>
-                  <Card className={`h-full hover:shadow-lg transition-shadow duration-300 flex flex-col ${!platform.available ? 'opacity-60' : ''}`}>
-                    <CardHeader className="flex-1">
-                      <div className="flex items-center gap-4 mb-4">
-                        <img src={platform.logo} alt={platform.title} className="w-16 h-16 rounded object-contain" />
-                        <CardTitle className="text-xl">{platform.title}</CardTitle>
+                  <Card className="h-full hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                    <CardHeader className="flex-1 text-center">
+                      <div className="flex justify-center mb-4">
+                        <img src={platform.logo} alt={platform.title} className="w-96 h-48 rounded object-contain" />
                       </div>
+                      <CardTitle className="text-xl">{platform.title}</CardTitle>
                       <CardDescription className="text-base leading-relaxed">
                         {platform.description}
                       </CardDescription>
                     </CardHeader>
                     {platform.reportUrl && (
-                      <CardContent className="pt-0">
+                      <CardContent className="pt-0 space-y-4">
                         <Button 
                           className="w-full bg-primary text-white hover:bg-primary/90"
                           asChild
@@ -154,42 +255,15 @@ export default function MythicMarketMogulPage() {
                             Open Report
                           </a>
                         </Button>
+                        
+                        {platform.id === 'osrs' && <OSRSNewsletterForm />}
+                        {platform.id === 'eve' && <EVENewsletterForm />}
                       </CardContent>
                     )}
                   </Card>
                 </ScrollFadeIn>
               ))}
             </div>
-          </div>
-        </section>
-      </LazyLoadSection>
-
-      {/* Benefits Section */}
-      <LazyLoadSection>
-        <section className="py-24 px-6 bg-secondary/30">
-          <div className="container mx-auto max-w-6xl">
-            <ScrollFadeIn direction="up">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-foreground mb-4">Outpace the Competition <img src="/images/vineyardtechnologiesicon.webp" alt="🍇" className="inline w-8 h-8 md:w-10 md:h-10" /></h2>
-              </div>
-            </ScrollFadeIn>
-            
-            <ScrollFadeIn direction="up" delay={200}>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {benefits.map((benefit, index) => (
-                  <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                    <CardHeader>
-                      <div className="flex items-center justify-center mb-2">
-                        <CheckCircle className="w-6 h-6 text-primary" />
-                      </div>
-                      <CardDescription className="text-base font-medium text-foreground">
-                        {benefit}
-                      </CardDescription>
-                    </CardHeader>
-                  </Card>
-                ))}
-              </div>
-            </ScrollFadeIn>
           </div>
         </section>
       </LazyLoadSection>
