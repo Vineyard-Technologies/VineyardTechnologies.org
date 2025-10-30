@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Newsletter Subscription</title>
+</head>
+<body>
+    <script>
+        // This page handles the form submission redirect from Brevo
+        const urlParams = new URLSearchParams(window.location.search);
+        const confirmed = urlParams.get('confirmed');
+        
+        if (confirmed === 'true') {
+            window.opener.postMessage({ type: 'SUBSCRIPTION_SUCCESS' }, '*');
+            window.close();
+        }
+    </script>
+    <p>Processing subscription...</p>
+</body>
+</html>
