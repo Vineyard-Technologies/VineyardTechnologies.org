@@ -17,6 +17,7 @@ const MythicMarketMogulPage = lazy(() => import('@/pages/MythicMarketMogulPage')
 const TermsOfServicePage = lazy(() => import('@/pages/TermsOfServicePage'))
 const PrivacyPolicyPage = lazy(() => import('@/pages/PrivacyPolicyPage'))
 const SiteMapPage = lazy(() => import('@/pages/SiteMapPage'))
+const UnsubscribePage = lazy(() => import('@/pages/UnsubscribePage'))
 
 // Loading component
 function PageLoader() {
@@ -86,6 +87,7 @@ function App() {
             <Route path="/terms" element={<TermsOfServicePage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/sitemap" element={<SiteMapPage />} />
+            <Route path="/unsubscribe" element={<UnsubscribePage />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </Suspense>
