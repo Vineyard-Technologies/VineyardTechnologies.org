@@ -29,7 +29,7 @@ export default function CTAButtons({
           {primaryText}
         </Button>
       ) : (
-        <a href={primaryHref} className="inline-block">
+        <a href={primaryHref} className="inline-block cursor-pointer">
           <Button className="bg-primary text-white hover:bg-primary/90 px-8 py-3 text-lg">
             {primaryText}
           </Button>
@@ -44,7 +44,7 @@ export default function CTAButtons({
           {secondaryText}
         </Button>
       ) : (
-        <a href={secondaryHref} className="inline-block">
+        <a href={secondaryHref} className="inline-block cursor-pointer">
           <Button className="border-2 border-gray-400 text-gray-700 bg-white hover:bg-white hover:text-primary hover:border-primary px-8 py-3 text-lg transition-colors duration-200">
             {secondaryText}
           </Button>
