@@ -24,7 +24,7 @@ export default function Footer() {
               © 2025 <Link to="/" className="text-white/80 hover:text-white transition-colors duration-200">Vineyard Technologies</Link>. All rights reserved.
             </div>
             <div className="text-sm text-white/90">
-              This website is licensed under the <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors duration-200 underline">MIT License</a>.
+              This website is licensed under the <a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer" className="text-white/80 hover:text-white transition-colors duration-200">MIT License</a>.
             </div>
             <div className="flex flex-wrap gap-4 text-sm">
               <Link to="/terms" className="text-white/80 hover:text-white transition-colors duration-200">
