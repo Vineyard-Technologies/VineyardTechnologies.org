@@ -7,12 +7,13 @@ import ScrollFadeIn from "@/components/ScrollFadeIn"
 import { Code, Users, Settings, ArrowRight, CheckCircle } from "lucide-react"
 import { useForm, ValidationError } from '@formspree/react'
 import { 
-  SiReact, SiTypescript, SiNodedotjs, SiPython, SiGo, SiAmazon, SiDocker, SiKubernetes,
+  SiReact, SiTypescript, SiNodedotjs, SiPython, SiGo, SiDocker, SiKubernetes,
   SiPostgresql, SiMongodb, SiGraphql, SiOpenjdk, SiSpring, SiAngular, SiVuedotjs,
   SiNextdotjs, SiExpress, SiDjango, SiFlask, SiRedis, SiElasticsearch, SiApachekafka,
   SiTerraform, SiJenkins, SiGithubactions, SiGooglecloud, SiMysql,
   SiRabbitmq, SiDotnet, SiJavascript, SiSharp
 } from "react-icons/si"
+import { FaAws } from "react-icons/fa6"
 import { Cloud, Database, Server } from "lucide-react"
 // Images are now served from public/images as static assets
 
@@ -151,7 +152,7 @@ export default function HomePage() {
     { name: "Node.js", icon: SiNodedotjs },
     { name: "Python", icon: SiPython },
     { name: "Go", icon: SiGo },
-    { name: "AWS", icon: SiAmazon },
+    { name: "AWS", icon: FaAws },
     { name: "Docker", icon: SiDocker },
     { name: "Kubernetes", icon: SiKubernetes },
     { name: "PostgreSQL", icon: SiPostgresql },
